@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="600.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <JFXTextField fx:id="txt_select" editable="false" layoutX="118.0" layoutY="96.0" opacity="0.75" prefHeight="31.0" prefWidth="323.0" promptText="select a file">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btn_select" layoutX="441.0" layoutY="96.0" mnemonicParsing="false" onMouseClicked="#selectFile" prefHeight="31.0" prefWidth="42.0" ripplerFill="#0272a6" text="..." />
+      <JFXButton fx:id="btn_analyze" alignment="CENTER" layoutX="257.0" layoutY="185.0" mnemonicParsing="false" onMouseClicked="#analyze" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #0272A6;" text="Analyze" textAlignment="CENTER" textFill="WHITE" />
+      <AnchorPane fx:id="pane_red" layoutY="238.0" prefHeight="372.0" prefWidth="600.0" style="-fx-background-color: #edeff2;">
+         <children>
+            <Label layoutX="66.0" layoutY="86.0" prefHeight="50.0" prefWidth="103.0" text="Threat name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_hash1" alignment="CENTER" layoutX="170.0" layoutY="14.0" prefHeight="50.0" prefWidth="251.0" text="Threat Detected!" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_hash2" layoutX="66.0" layoutY="136.0" prefHeight="50.0" prefWidth="87.0" text="Engine">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_hash21" layoutX="66.0" layoutY="186.0" prefHeight="50.0" prefWidth="87.0" text="Threat type">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_hash211" layoutX="66.0" layoutY="236.0" prefHeight="50.0" prefWidth="164.0" text="Awareness rating">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_name" alignment="CENTER" layoutX="192.0" layoutY="86.0" prefHeight="50.0" prefWidth="394.0" text="null" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_engine" alignment="CENTER" layoutX="192.0" layoutY="136.0" prefHeight="50.0" prefWidth="394.0" text="null" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_type" alignment="CENTER" layoutX="192.0" layoutY="186.0" prefHeight="50.0" prefWidth="394.0" text="null" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_aware" alignment="CENTER" contentDisplay="CENTER" layoutX="192.0" layoutY="236.0" prefHeight="50.0" prefWidth="394.0" text="null" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_green" layoutY="238.0" prefHeight="372.0" prefWidth="600.0" style="-fx-background-color: WHITE;">
+         <children>
+            <Label fx:id="lbl_green" alignment="CENTER" contentDisplay="CENTER" layoutX="161.0" layoutY="139.0" text="No threat detected!" textAlignment="CENTER" textFill="#00ff45" visible="false">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
